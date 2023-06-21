@@ -20,12 +20,10 @@ phases:
     commands:
        - echo "Creating build for react based app"
        - npm run build
-       - npm install pm2 -g
    
   post_build:
     commands:
        - echo "we're in post build stage"
-       - pm2 start app.js
       # - command
 #reports:
   #report-name-or-arn:
