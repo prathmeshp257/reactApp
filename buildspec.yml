@@ -10,7 +10,7 @@ phases:
       # name: version
     commands:
        - echo "Installing Node Modules"
-       - npm i
+     #  - npm i
        - #command
   pre_build:
     commands: echo "Prebuild Stage"
@@ -20,7 +20,7 @@ phases:
     commands:
        - echo "Creating build for react based app"
        - pwd
-       - npm run build 
+       #- npm run build 
   post_build:
     commands:
        - echo "we're in post build stage"
