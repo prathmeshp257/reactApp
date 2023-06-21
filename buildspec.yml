@@ -1,0 +1,44 @@
+version: 0.2
+
+
+phases:
+  install:
+    #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
+    #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
+    runtime-versions:
+       nodejs: 18
+      # name: version
+    commands:
+       - echo "Installing Node Modules"
+       - npm i
+       - #command
+  pre_build:
+    commands: echo "Prebuild Stage"
+      # - command
+      # - command
+  build:
+    commands:
+       - echo "Creating build for react based app"
+       # npm run build
+  post_build:
+    commands:
+       - echo "we're in post build stage"
+      # - command
+#reports:
+  #report-name-or-arn:
+    #files:
+      # - location
+      # - location
+    #base-directory: location
+    #discard-paths: yes
+    #file-format: JunitXml | CucumberJson
+artifacts:
+  files:
+     - "**/*"
+    # - location
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
